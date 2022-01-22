@@ -1,0 +1,7 @@
+vpc_cidr = "10.0.0.0/16"
+public_subnet_cidr = "10.0.0.0/24"
+env_name = "My"
+avail_zone = "eu-central-1a"
+public_key = "C:/Users/Andreja/.ssh/id_rsa.pub"
+instance_type = "t2.micro"
+ami = "ami-05cafdf7c9f772ad2"

@@ -1,3 +1,8 @@
+resource "aws_key_pair" "ssh-key" {
+  key_name = "ssh-key"
+  public_key = file(var.ssh_public_key)
+}
+
 resource "aws_instance" "myec2" {
    ami = "ami-05cafdf7c9f772ad2"
    instance_type = "t2.micro"
@@ -22,12 +27,6 @@ resource "aws_instance" "myec2" {
    }
 
 }
-
-resource "aws_key_pair" "ssh-key" {
-  key_name = "ssh-key"
-  public_key = file(var.ssh_public_key)
-}
-
 
 resource "aws_instance" "myec2-private" {
    ami = "ami-05cafdf7c9f772ad2"
